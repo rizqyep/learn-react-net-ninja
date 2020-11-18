@@ -11,7 +11,14 @@ class App extends Component{
     ]
   }
   addNinja=(ninja) => {
+    ninja.id=Math.random();
+    //Set updated ninjas array to current array + new ninja object
+    let updatedNinjas=[...this.state.ninjas, ninja];
     
+    this.setState({
+      ninjas: updatedNinjas
+    })
+
   }
   render() {
     return (

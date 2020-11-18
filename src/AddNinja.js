@@ -12,11 +12,12 @@ class AddNinja extends Component {
         this.setState({
             [e.target.id] : e.target.value
         })
+       
     }
 
     handleSubmit= (e) =>{
     e.preventDefault();
-    console.log(this.state);
+    this.props.addNinja(this.state);
     }
 
     render() {
