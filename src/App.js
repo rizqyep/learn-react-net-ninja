@@ -10,13 +10,16 @@ class App extends Component{
       
     ]
   }
+  addNinja=(ninja) => {
+    
+  }
   render() {
     return (
       <div className="App">
         <h1>Rep's journey to react!</h1>
         <p>Welcome!</p>
         <h3>Ninjas Data : </h3>
-        <AddNinja/>
+        <AddNinja addNinja={this.addNinja} />
         <Ninjas ninjas={this.state.ninjas} />
       </div>
     );
