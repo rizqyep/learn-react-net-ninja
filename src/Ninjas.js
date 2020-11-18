@@ -6,10 +6,11 @@ const Ninjas  = ({ninjas})=> {
         if(ninja.age>20) {
             return (
                 <tr className="ninja" key={ninja.id}>
+                
                     <td>{ninja.name} </td>
                     <td>{ninja.age} </td>
                     <td>{ninja.belt} </td>
-                    <br></br>
+                    
                 </tr>
         
             );
@@ -23,9 +24,11 @@ const Ninjas  = ({ninjas})=> {
         <div className="ninjaList">
             <table>
                 <thead>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Belt</th>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Belt</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {ninjaList}
