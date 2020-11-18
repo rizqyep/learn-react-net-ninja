@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Ninjas from './Ninjas';
 import AddNinja from './AddNinja';
+
+
 class App extends Component{
   state={
     ninjas: [
@@ -10,6 +12,8 @@ class App extends Component{
       
     ]
   }
+
+  //Create function to pass as a props to AddNinja Component
   addNinja=(ninja) => {
     ninja.id=Math.random();
     //Set updated ninjas array to current array + new ninja object
@@ -18,8 +22,16 @@ class App extends Component{
     this.setState({
       ninjas: updatedNinjas
     })
-
   }
+
+  deleteNinja=(id) => {
+    let updatedNinjas=this.state.ninjas.filter(ninja => {
+      return ninja.id !== id
+    })   
+    this.setState({ninjas : updatedNinjas})
+  }
+
+
   render() {
     return (
       <div className="App">
@@ -27,7 +39,7 @@ class App extends Component{
         <p>Welcome!</p>
         <h3>Ninjas Data : </h3>
         <AddNinja addNinja={this.addNinja} />
-        <Ninjas ninjas={this.state.ninjas} />
+        <Ninjas ninjas={this.state.ninjas} deleteNinja ={this.deleteNinja} />
       </div>
     );
     }

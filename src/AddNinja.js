@@ -17,6 +17,8 @@ class AddNinja extends Component {
 
     handleSubmit= (e) =>{
     e.preventDefault();
+    
+    //This will pass back object to addNinja at App Component
     this.props.addNinja(this.state);
     }
 
