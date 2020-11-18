@@ -1,0 +1,43 @@
+body{
+    background-color: pink;
+    transition : all 1s;
+}
+
+form{
+    background-color: #fefefe;
+    padding : 30px;
+}
+
+form label{
+    display : block;
+    color : #e64c4c;
+}
+
+form input{
+    margin-top : 5px;
+    margin-bottom : 20px;
+    height : 25px;
+    border-top : 0px;
+    border-left : 0px;
+    border-right : 0px;
+    border-bottom : solid 1px #cdcdcd;
+}
+
+form input:focus{
+    outline : none;
+    border-top : 0px;
+    border-left : 0px;
+    border-right : 0px;
+    border-bottom : solid 1.5px #ffaaaa;
+}
+
+form button{
+    height : 40px;
+    min-width : 120px;
+
+    background-color: #e64c4c;
+    color : white;
+    border : solid 1px #e64c4c;
+    border-radius: 2px;
+
+}

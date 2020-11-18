@@ -27,15 +27,15 @@ class AddNinja extends Component {
 
             <div>
                 <form onSubmit = {this.handleSubmit}>
-                    <label htmlFor="name">Name :</label>
+                    <label htmlFor="name">Name </label>
                     <input type="text" id="name" onChange={ this.handleChange }/>
                     <br></br>
                     
-                    <label htmlFor="age">Age :</label>
+                    <label htmlFor="age">Age </label>
                     <input type="text" id="age" onChange={ this.handleChange }/>
                     <br></br>
                     
-                    <label htmlFor="belt">Belt :</label>
+                    <label htmlFor="belt">Belt </label>
                     <input type="text" id="belt" onChange={ this.handleChange }/>
                     <br></br>
                     <button>Submit</button>
